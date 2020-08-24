@@ -1,80 +1,56 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta name='freelancehunt' content='812627ac3c9d0ff' />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Description"
-        content="Python, .NET, JavaScript Developer. Making websites on every taste, bots for social networks, windows apps for every tasks">
+    <meta name="Description" content="Python, .NET, JavaScript Developer. Making websites on every taste, bots for social networks, windows apps for every tasks">
     <title>Jolken Portfolio</title>
     <meta name='freelancehunt' content='812627ac3c9d0ff' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
 </head>
-
 <body>
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <h4 class="text-white">Collapsed content</h4>
-                <span class="text-muted">Toggleable via the navbar brand.</span>
-            </div>
-        </div>
-
-        <nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
-            <a class="navbar-brand" href="#">Адран</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse hidden-tablet hidden-phone" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <img src="img/cloud.svg" height="50px">
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Big parallax image -->
+    <!-- Big parallax image -->
         <div id="home" data-parallax="scroll">
+            <div class="center-text">
 
-            <div style="margin-right: 3rem;">
+                <h1 class="big">JOLKEN</h1>
+                <br>
+                <h2>Python, .NET, JavaScript Developer</h2>
+                <br>
+                <p>Making <mark>websites</mark> on every taste, <mark>bots</mark> for social networks, <mark>windows app</mark> for any task</p>
 
-                <h1 class="big" style="max-width: 20rem;">Адран</h1>
-                <h4 style="max-width: 15rem; text-align: inherit;">Пожарные системы для защиты вас и ваших близких</h4>
+
             </div>
-
-
         </div>
-
-        <!-- Navigation menu -->
-
-        <br>
+    
+    <!-- Navigation menu -->
+        <div class="container-fluid nav-menu sticky-top" style="background-color: #ffffff">
+            <div class="row justify-content-center" style="text-align: center; margin: 0.5em;">
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 menu-item">
+                    <h4><a href="#" id="test" aria-label="Go to home of the page">HOME</a></h4>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 menu-item">
+                    <h4><a href="#services" aria-label="Go to services section">SERVICES</a></h4>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 menu-item">
+                    <h4><a href="#about" aria-label="Go to about section">ABOUT</a></h4>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-2 menu-item">
+                    <h4><a href="#contact" aria-label="Go to contact section">CONTACT</a></h4>
+                </div>
+            </div>
+        </div>
+    <br>
         <section id="services">
-
-            <!-- Services section -->
-            <article class="name">
+            
+        <!-- Services section -->
+            <article class="name" >
                 <h1>SERVICES</h1>
                 <div class="line"></div>
                 <br>
@@ -84,32 +60,39 @@
             <br>
             <article>
                 <div class="container">
-                    <div class="row services">
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
-                            <i class="fas fa-medal"></i>
-                            <div class="space"></div>
-                            <h5>Честь</h5>
-                            <div class="space"></div>
-                            <p>Защищай слабых чтобы стать сильнее для врагов.</p>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
-                            <i class="fas fa-equals"></i>
-                            <div class="space"></div>
-                            <h5>Справедливость</h5>
-                            <div class="space"></div>
-                            <p>Помогай младшим, чтобы в старости они тебя уважали</p>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
-                            <i class="fas fa-volume-up"></i>
-                            <div class="space"></div>
-                            <h5>Отвага</h5>
-                            <div class="space"></div>
-                            <p>Не жалей сил, времени, денег, дабы страх обошёл тебя бедой</p>
-                        </div>
-
+                    <div class="row justify-content-center services">
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
+                        <i class="fas fa-desktop"></i>
+                        <div class="space"></div>
+                        <h5>FRONTEND</h5>
+                        <div class="space"></div>
+                        <p>Responsive websites. Marking from PSD to HTML5/CSS3. Vue.js frontend apps.</p>
                     </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
+                        <i class="fas fa-terminal"></i>
+                        <div class="space"></div>
+                        <h5>BACKEND</h5>
+                        <div class="space"></div>
+                        <p>Asynchronus, multithread backend for websites in Python, C#, Node.js.</p>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
+                        <i class="fas fa-robot"></i>
+                        <div class="space"></div>
+                        <h5>BOTS</h5>
+                        <div class="space"></div>
+                        <p>Bots for different services such as: Discord, Twitter, Telegram, Viber, VKontakte.</p>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3 service">
+                        <i class="fab fa-windows"></i>
+                        <div class="space"></div>
+                        <h5>WINDOWS</h5>
+                        <div class="space"></div>
+                        <p>Windows applications for different tasks, using Python, C#, Node.js.</p>
+                    </div>
+                    </div> 
                 </div>
 
             </article>
@@ -128,50 +111,42 @@
             -->
             <div id="parallax-about" data-parallax="scroll" data-image-src="img/pen2.jpg">
                 <div class="center-text">
-
+        
                     <h1 class="big">ABOUT</h1>
                     <div class="line" style="border-color: rgb(233, 233, 233)"></div>
                     <br>
-                    <p class="about-text">Pro developer. C#(.Net Core 2.1+, .Net Framework 4.7.2), Python 3.6+, Amazon
-                        AWS,
-                        Azure(VMs, app sercices, CosmosDB) </p>
+                    <p class="about-text">Pro developer. C#(.Net Core 2.1+, .Net Framework 4.7.2), Python 3.6+, Amazon AWS, Azure(VMs, app sercices, CosmosDB) </p>
                 </div>
-
+        
             </div>
             <br>
-            <article class="name">
+            <article class="name" >
                 <h1>Experience</h1>
             </article>
             <br>
             <article class="graphic">
                 <div class="graphic-section">
-                    <div class="graphic-line" style="width: 75%;">
-                        <h5>1.5 years</h5>
-                    </div>
+                    <div class="graphic-line" style="width: 75%;"><h5>1.5 years</h5></div>
                 </div>
                 <h4>C#</h4>
                 <div class="graphic-section">
-                    <div class="graphic-line" style="width: 50%;">
-                        <h5>9 months</h5>
-                    </div>
+                    <div class="graphic-line" style="width: 50%;"><h5>9 months</h5></div>
                 </div>
                 <h4>Python</h4>
                 <div class="graphic-section">
-                    <div class="graphic-line" style="width: 35%; min-width: auto;">
-                        <h5>6 months</h5>
-                    </div>
+                    <div class="graphic-line" style="width: 35%; min-width: auto;"><h5>6 months</h5></div>
                 </div>
                 <h4>Javascript</h4>
             </article>
-
+            
         </section>
         <br>
         <br>
         <footer class="dark">
-
-            <section id="contact" class="dark">
+            
+        <section id="contact" class="dark">
                 <br>
-                <article class="name dark">
+                <article class="name dark" >
                     <h1>CONTACT</h1>
                     <div class="line" style="border-color: rgb(233, 233, 233)"></div>
                     <br>
@@ -182,21 +157,19 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
-                                <a href="mailto:jolken@outlook.com" target="_blank" aria-label="Mail to me"
-                                    rel="noreferrer">
+                                <a href="mailto:jolken@outlook.com" target="_blank" aria-label="Mail to me" rel="noreferrer">
 
                                     <span>
-
+                                        
                                         <i class="far fa-envelope"></i>
                                         <br>
                                     </span>
                                 </a>
                                 <h5>jolken@outlook.com</h5>
                             </div>
-
+                            
                             <div class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
-                                <a href="https://t.me/jolken" target="_blank" aria-label="Send me message in telegram"
-                                    rel="noreferrer">
+                                    <a href="https://t.me/jolken" target="_blank" aria-label="Send me message in telegram" rel="noreferrer">
                                     <span>
                                         <i class="fab fa-telegram-plane"></i>
                                         <br>
@@ -204,10 +177,9 @@
                                 </a>
                                 <h5>telegram: @jolken</h5>
                             </div>
-
+                                
                             <div class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
-                                <a href="https://github.com/Jolken" target="_blank"
-                                    aria-label="Redirect to my GitHub profile" rel="noreferrer">
+                                <a href="https://github.com/Jolken" target="_blank" aria-label="Redirect to my GitHub profile" rel="noreferrer">
                                     <span>
                                         <i class="fab fa-github"></i>
                                         <br>
@@ -244,11 +216,11 @@
                     </div>
                     </form>
                     -->
-            </section>
+        </section>
         </footer>
 
-
-        <!--
+        
+    <!--
         <script src="js/parallax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -257,22 +229,21 @@
 
 
 
-        <script>
+    <script>
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 link = anchor.getAttribute("href");
                 console.log(link)
 
                 anchor.addEventListener('click', function (e) {
-                    document.querySelector("#" + this.text.toLowerCase()).scrollIntoView({
+                    document.querySelector("#"+this.text.toLowerCase()).scrollIntoView({
                         behavior: 'smooth',
-                        block: "start",
+                        block:    "start",
                     });
                 });
                 anchor.removeAttribute("href");
             });
-
-        </script>
+        
+    </script>
 </body>
-
 </html>
