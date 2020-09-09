@@ -1,3 +1,7 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 a {
     color: rgb(33,37,41);
 }
@@ -70,10 +74,8 @@ nav {
 .center-text {
     position:absolute; 
     height:100%; 
-    width: 100%;
     font-weight: bold;
     color: #2b2b2b;
-    align: center;
     color: rgb(233, 233, 233);
     display: flex;
     text-align: center;
@@ -81,6 +83,8 @@ nav {
     margin: 0px;
     padding: 0px;
     padding: 1em;
+    justify-content: left;
+    margin-left: 2rem;
 
 }
 .center-text p {
@@ -126,6 +130,9 @@ section {
 }
 .about-text {
     text-align: center;
+    color: #222222;
+    background-color: whitesmoke;
+    padding: 1rem;
 }
 
 .services {
@@ -158,8 +165,8 @@ section {
 }
 #parallax-about {
     min-height: 400px;
-    background-image: url("../img/pen3.jpg");
-
+    background-image: url("../img/about.jpg");
+    color:#565857;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -176,13 +183,13 @@ section {
 }
 .graphic-section {
     width: 100%;
-    margin-top: 2em;
+    margin-bottom: 2em;
     flex-direction: row;
-    background-color: rgb(172, 172, 172, 0.6);
+    background-color: #fbfbfb;
 }
 .graphic-line {
     height: 40px;
-    background-color:rgba(34, 34, 34, 0.6);
+    background-color:#e55812;
     
     display: flex;
     justify-content: center;

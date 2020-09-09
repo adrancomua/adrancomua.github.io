@@ -126,42 +126,38 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam metus est, gravida non orci ac, volutpat consectetur tortor.</p>
             </article>
             -->
-            <div id="parallax-about" data-parallax="scroll" data-image-src="img/pen2.jpg">
+            <div id="parallax-about" data-parallax="scroll" data-image-src="img/about.jpg">
                 <div class="center-text">
 
-                    <h1 class="big">ABOUT</h1>
-                    <div class="line" style="border-color: rgb(233, 233, 233)"></div>
-                    <br>
-                    <p class="about-text">Pro developer. C#(.Net Core 2.1+, .Net Framework 4.7.2), Python 3.6+, Amazon
-                        AWS,
-                        Azure(VMs, app sercices, CosmosDB) </p>
+                    <h1 class="big" id="eventTextFromRight" style="background: #222222; color: white; padding: 1rem;">МЫ</h1>
+                    <p class="about-text" id="textFromRightAppearence" style="margin-left: 100rem;">Защищаем вас в 24/7 </p>
                 </div>
 
             </div>
             <br>
             <article class="name">
-                <h1>Experience</h1>
+                <h1>Наши достижения</h1>
             </article>
             <br>
-            <article class="graphic">
+            <article class="graphic" id="bars">
+                <h4>Помощь страждущим</h4>
                 <div class="graphic-section">
-                    <div class="graphic-line" style="width: 75%;">
+                    <div class="graphic-line" style="width: 0%;">
                         <h5>1.5 years</h5>
                     </div>
                 </div>
-                <h4>C#</h4>
+                <h4>Гарантия</h4>
                 <div class="graphic-section">
-                    <div class="graphic-line" style="width: 50%;">
+                    <div class="graphic-line" style="width: 0%;">
                         <h5>9 months</h5>
                     </div>
                 </div>
-                <h4>Python</h4>
+                <h4>Великолепие</h4>
                 <div class="graphic-section">
-                    <div class="graphic-line" style="width: 35%; min-width: auto;">
+                    <div class="graphic-line" style="width: 0%;">
                         <h5>6 months</h5>
                     </div>
                 </div>
-                <h4>Javascript</h4>
             </article>
 
         </section>
@@ -258,7 +254,11 @@
 
 
         <script>
-
+            var barAnimationPlayed = false;
+            var textFromRightAppearencePlayed = false;
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 link = anchor.getAttribute("href");
                 console.log(link)
@@ -271,6 +271,55 @@
                 });
                 anchor.removeAttribute("href");
             });
+
+
+
+            async function barAnimation() {
+                if (barAnimationPlayed) {
+                    return;
+                }
+                barAnimationPlayed = true;
+                var graphics = document.getElementsByClassName("graphic-line");
+                for (g = 0; g < graphics.length; g++) {
+                    for (i = 0; i < 100; i++) {
+                        graphics[g].style.width = i + '%';
+                        await sleep(10);
+                    }
+                    await sleep(200);
+                }
+
+            }
+
+            async function textFromRightAppearence() {
+                if (textFromRightAppearencePlayed) {
+                    return;
+                }
+                textFromRightAppearencePlayed = true;
+                var el = document.getElementById("textFromRightAppearence");
+                for (i = 100; i > 0; i--) {
+                    el.style.marginLeft = i+"rem";
+                    await sleep(10);
+                }
+            }
+
+
+
+            var observer = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting === true)
+                    barAnimation().then(() => { });
+
+            }, { threshold: [1] });
+            observer.observe(document.querySelector("#bars"));
+
+            var observer2 = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting === true)
+                textFromRightAppearence().then(() => { });
+
+            }, { threshold: [1] });
+            observer2.observe(document.querySelector("#eventTextFromRight"));
+
+
+
 
         </script>
 </body>
