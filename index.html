@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
 </head>
@@ -26,11 +26,12 @@
                 <span class="text-muted">Toggleable via the navbar brand.</span>
             </div>
         </div>
+        <!--
 
-        <nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
-            <a class="navbar-brand" href="#">Адран</a>
+    <nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
+        <a class="navbar-brand" href="#">Адран</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent" aria-controls="navbarNav" aria-expanded="false"
+            data-target="#navbarToggleExternalContent" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,7 +46,7 @@
                     <li class="nav-item">
                         <img src="img/cloud.svg" height="50px">
                     </li>
-
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
                     </li>
@@ -55,14 +56,16 @@
                 </ul>
             </div>
         </nav>
-
+        
+    -->
         <!-- Big parallax image -->
         <div id="home" data-parallax="scroll">
 
-            <div style="margin-right: 3rem;">
+            <div id="header-adran" style="margin-right: 3rem; margin-top: 1rem;">
 
-                <h1 class="big" style="max-width: 20rem;">Адран</h1>
-                <h4 style="max-width: 15rem; text-align: inherit;">Пожарные системы для защиты вас и ваших близких</h4>
+                <h1 class="big" style="max-width: 20rem; background-color: black;">Адран</h1>
+                <h4 style="max-width: 15rem; text-align: left; background-color: white; padding-right: 20px;">Пожарные
+                    системы для защиты вас и ваших близких</h4>
             </div>
 
 
@@ -75,7 +78,7 @@
 
             <!-- Services section -->
             <article class="name">
-                <h1>SERVICES</h1>
+                <h1 class="animate__animated animate__bounce">SERVICES</h1>
                 <div class="line"></div>
                 <br>
                 <p>Take a look at things, that I can do for you</p>
@@ -129,8 +132,10 @@
             <div id="parallax-about" data-parallax="scroll" data-image-src="img/about.jpg">
                 <div class="center-text">
 
-                    <h1 class="big" id="eventTextFromRight" style="background: #222222; color: white; padding: 1rem;">МЫ</h1>
-                    <p class="about-text" id="textFromRightAppearence" style="margin-left: 100rem;">Защищаем вас в 24/7 </p>
+                    <h1 class="big" id="eventTextFromRight" style="background: #222222; color: white; padding: 1rem;">МЫ
+                    </h1>
+                    <p class="about-text" id="textFromRightAppearence" style="margin-left: 100rem;">Защищаем вас в 24/7
+                    </p>
                 </div>
 
             </div>
@@ -177,7 +182,7 @@
                 <article class="contact-cards">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
+                            <div id="card1" class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
                                 <a href="mailto:jolken@outlook.com" target="_blank" aria-label="Mail to me"
                                     rel="noreferrer">
 
@@ -190,7 +195,7 @@
                                 <h5>jolken@outlook.com</h5>
                             </div>
 
-                            <div class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
+                            <div id="card2" class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
                                 <a href="https://t.me/jolken" target="_blank" aria-label="Send me message in telegram"
                                     rel="noreferrer">
                                     <span>
@@ -201,7 +206,7 @@
                                 <h5>telegram: @jolken</h5>
                             </div>
 
-                            <div class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
+                            <div id="card3" class="col-11 col-sm-8 col-md-4 col-lg-3 contact">
                                 <a href="https://github.com/Jolken" target="_blank"
                                     aria-label="Redirect to my GitHub profile" rel="noreferrer">
                                     <span>
@@ -256,6 +261,10 @@
         <script>
             var barAnimationPlayed = false;
             var textFromRightAppearencePlayed = false;
+            var headerAdranPlayed = false;
+            var card1Played = false;
+            var card2Played = false;
+            var card3Played = false;
             function sleep(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms));
             }
@@ -281,8 +290,9 @@
                 barAnimationPlayed = true;
                 var graphics = document.getElementsByClassName("graphic-line");
                 for (g = 0; g < graphics.length; g++) {
-                    for (i = 0; i < 100; i++) {
-                        graphics[g].style.width = i + '%';
+                    graphics[g].classList.add('animate__animated', "animate__backInLeft");
+                    for (var i1 = 0; i1 < 100; i1++) {
+                        graphics[g].style.width = i1 + '%';
                         await sleep(10);
                     }
                     await sleep(200);
@@ -296,11 +306,61 @@
                 }
                 textFromRightAppearencePlayed = true;
                 var el = document.getElementById("textFromRightAppearence");
-                for (i = 100; i > 0; i--) {
-                    el.style.marginLeft = i+"rem";
+                for (var i2 = 100; i2 > 0; i2--) {
+                    el.style.marginLeft = i2 + "rem";
                     await sleep(10);
                 }
+                el.parentElement.classList.add('animate__animated', "animate__flip");
             }
+
+            async function headerAdran() {
+                if (headerAdranPlayed) {
+                    return;
+                }
+                headerAdranPlayed = true;
+                var el = document.getElementById("header-adran");
+                for (var i3 = -1; i3 < 100; i3++) {
+                    el.style.opacity = (parseFloat(el.style.opacity) || 0) + 0.01;
+                    await sleep(10);
+                }
+                el.classList.add('animate__animated', "animate__hinge");
+                el.addEventListener('animationend', () => {
+                    el.classList.remove('animate__animated',"animate__hinge");
+                    el.classList.add('animate__animated', "animate__lightSpeedInRight");
+                });
+
+            }
+
+            async function card1() {
+                if (card1Played) {
+                    return;
+                }
+                var el = document.getElementById("card1");
+                el.classList.add('animate__animated', "animate__fadeInLeft");
+                
+
+            }
+
+            async function card2() {
+                if (card2Played) {
+                    return;
+                }
+                var el = document.getElementById("card2");
+                el.classList.add('animate__animated', "animate__fadeInRight");
+                
+
+            }
+
+            async function card3() {
+                if (card3Played) {
+                    return;
+                }
+                var el = document.getElementById("card3");
+                el.classList.add('animate__animated', "animate__fadeInLeft");
+                
+
+            }
+
 
 
 
@@ -313,10 +373,39 @@
 
             var observer2 = new IntersectionObserver(function (entries) {
                 if (entries[0].isIntersecting === true)
-                textFromRightAppearence().then(() => { });
+                    textFromRightAppearence().then(() => { });
 
             }, { threshold: [1] });
             observer2.observe(document.querySelector("#eventTextFromRight"));
+
+            var observer3 = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting === true)
+                    headerAdran().then(() => { });
+
+            }, { threshold: [1] });
+            observer3.observe(document.querySelector("#header-adran"));
+
+
+            var observer4 = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting === true)
+                    card1().then(() => { });
+
+            }, { threshold: [1] });
+            observer4.observe(document.querySelector("#card1"));
+
+            var observer5 = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting === true)
+                    card2().then(() => { });
+
+            }, { threshold: [1] });
+            observer5.observe(document.querySelector("#card2"));
+
+            var observer6 = new IntersectionObserver(function (entries) {
+                if (entries[0].isIntersecting === true)
+                    card3().then(() => { });
+
+            }, { threshold: [1] });
+            observer6.observe(document.querySelector("#card3"));
 
 
 

@@ -24,6 +24,9 @@ a {
 
 
 }
+#header-adran {
+    opacity: 0;
+}
 #home mark{
     background-color: rgb(253, 245, 206);
     font-weight: bold;
